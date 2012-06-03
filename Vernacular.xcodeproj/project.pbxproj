@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B68E8DC13FCB4AC00685A32 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */; };
+		9B845514157C267C00744516 /* RSWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCB318C157C183D00DB7961 /* RSWebSocket.framework */; };
+		9B845515157C268300744516 /* Renaissance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
+		9BC2496C157C24310074F558 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24968157C24310074F558 /* Credits.rtf */; };
+		9BC2496E157C24310074F558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB3198157C221800DB7961 /* main.m */; };
+		9BC24974157C24570074F558 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24972157C24570074F558 /* MainMenu.xib */; };
+		9BCB3195157C1ACB00DB7961 /* Renaissance.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
+		9BCB3196157C1AD100DB7961 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BCB318C157C183D00DB7961 /* RSWebSocket.framework */; };
+		9BCB31B2157C22DD00DB7961 /* VernacularAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B845510157C265200744516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B19FC6F14D615E100D8F2CB;
+			remoteInfo = RSWebSocket;
+		};
+		9B845512157C265200744516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BF7579C141453E000EDFE39;
+			remoteInfo = Renaissance;
+		};
+		9B95E580157C17F3009493DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9BF7579D141453E000EDFE39;
+			remoteInfo = Renaissance;
+		};
+		9B95E582157C17F3009493DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9BF757B5141453E000EDFE39;
+			remoteInfo = RenaissanceTests;
+		};
+		9BCB318B157C183D00DB7961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B19FC7014D615E100D8F2CB;
+			remoteInfo = RSWebSocket;
+		};
+		9BCB318D157C183D00DB7961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B19FC8814D615E100D8F2CB;
+			remoteInfo = RSWebSocketTests;
+		};
+		9BCB318F157C183D00DB7961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9BFD3AB41537D5D100F9A1F2;
+			remoteInfo = AutobahnTests;
+		};
+		9BCB3191157C183D00DB7961 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9BFD3A951537793000F9A1F2;
+			remoteInfo = Echo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B35664F141449D500C72916 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BCB3196157C1AD100DB7961 /* RSWebSocket.framework in CopyFiles */,
+				9BCB3195157C1ACB00DB7961 /* Renaissance.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B68E8D713FCB4AC00685A32 /* Vernacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vernacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9B68E8DE13FCB4AC00685A32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9B68E8DF13FCB4AC00685A32 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9B68E8E013FCB4AC00685A32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
+		9BC24969157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = client/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		9BC2496B157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = client/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		9BC24973157C24570074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = client/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSWebSocket.xcodeproj; path = ../RSWebSocket/RSWebSocket.xcodeproj; sourceTree = "<group>"; };
+		9BCB3198157C221800DB7961 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = client/main.m; sourceTree = SOURCE_ROOT; };
+		9BCB3199157C221800DB7961 /* Vernacular-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Vernacular-Info.plist"; path = "client/Vernacular-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9BCB319A157C221800DB7961 /* Vernacular-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Vernacular-Prefix.pch"; path = "client/Vernacular-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VernacularAppDelegate.h; path = client/VernacularAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VernacularAppDelegate.m; path = client/VernacularAppDelegate.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B68E8D413FCB4AC00685A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B68E8DC13FCB4AC00685A32 /* Cocoa.framework in Frameworks */,
+				9B845514157C267C00744516 /* RSWebSocket.framework in Frameworks */,
+				9B845515157C268300744516 /* Renaissance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B68E8CC13FCB4AB00685A32 = {
+			isa = PBXGroup;
+			children = (
+				9B68E8E113FCB4AC00685A32 /* Vernacular */,
+				9B68E8DA13FCB4AC00685A32 /* Frameworks */,
+				9B68E8D813FCB4AC00685A32 /* Products */,
+				9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */,
+				9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		9B68E8D813FCB4AC00685A32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B68E8D713FCB4AC00685A32 /* Vernacular.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B68E8DA13FCB4AC00685A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */,
+				9B68E8DD13FCB4AC00685A32 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B68E8DD13FCB4AC00685A32 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B68E8DE13FCB4AC00685A32 /* AppKit.framework */,
+				9B68E8DF13FCB4AC00685A32 /* CoreData.framework */,
+				9B68E8E013FCB4AC00685A32 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9B68E8E113FCB4AC00685A32 /* Vernacular */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */,
+				9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */,
+				9BC24972157C24570074F558 /* MainMenu.xib */,
+				9B68E8E213FCB4AC00685A32 /* Supporting Files */,
+			);
+			path = Vernacular;
+			sourceTree = "<group>";
+		};
+		9B68E8E213FCB4AC00685A32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BC24968157C24310074F558 /* Credits.rtf */,
+				9BC2496A157C24310074F558 /* InfoPlist.strings */,
+				9BCB3198157C221800DB7961 /* main.m */,
+				9BCB3199157C221800DB7961 /* Vernacular-Info.plist */,
+				9BCB319A157C221800DB7961 /* Vernacular-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B95E57C157C17F3009493DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B95E581157C17F3009493DE /* Renaissance.framework */,
+				9B95E583157C17F3009493DE /* RenaissanceTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BCB3185157C183D00DB7961 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB318C157C183D00DB7961 /* RSWebSocket.framework */,
+				9BCB318E157C183D00DB7961 /* RSWebSocketTests.octest */,
+				9BCB3190157C183D00DB7961 /* AutobahnTests.app */,
+				9BCB3192157C183D00DB7961 /* Echo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B68E8D613FCB4AC00685A32 /* Vernacular */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B68E8F513FCB4AC00685A32 /* Build configuration list for PBXNativeTarget "Vernacular" */;
+			buildPhases = (
+				9B68E8D313FCB4AC00685A32 /* Sources */,
+				9B68E8D413FCB4AC00685A32 /* Frameworks */,
+				9B68E8D513FCB4AC00685A32 /* Resources */,
+				9B35664F141449D500C72916 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B845511157C265200744516 /* PBXTargetDependency */,
+				9B845513157C265200744516 /* PBXTargetDependency */,
+			);
+			name = Vernacular;
+			productName = Vernacular;
+			productReference = 9B68E8D713FCB4AC00685A32 /* Vernacular.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B68E8CE13FCB4AB00685A32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9B68E8D113FCB4AB00685A32 /* Build configuration list for PBXProject "Vernacular" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9B68E8CC13FCB4AB00685A32;
+			productRefGroup = 9B68E8D813FCB4AC00685A32 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9B95E57C157C17F3009493DE /* Products */;
+					ProjectRef = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
+				},
+				{
+					ProductGroup = 9BCB3185157C183D00DB7961 /* Products */;
+					ProjectRef = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9B68E8D613FCB4AC00685A32 /* Vernacular */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9B95E581157C17F3009493DE /* Renaissance.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Renaissance.framework;
+			remoteRef = 9B95E580157C17F3009493DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9B95E583157C17F3009493DE /* RenaissanceTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RenaissanceTests.octest;
+			remoteRef = 9B95E582157C17F3009493DE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9BCB318C157C183D00DB7961 /* RSWebSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSWebSocket.framework;
+			remoteRef = 9BCB318B157C183D00DB7961 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9BCB318E157C183D00DB7961 /* RSWebSocketTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RSWebSocketTests.octest;
+			remoteRef = 9BCB318D157C183D00DB7961 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9BCB3190157C183D00DB7961 /* AutobahnTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AutobahnTests.app;
+			remoteRef = 9BCB318F157C183D00DB7961 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9BCB3192157C183D00DB7961 /* Echo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Echo.app;
+			remoteRef = 9BCB3191157C183D00DB7961 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B68E8D513FCB4AC00685A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC2496C157C24310074F558 /* Credits.rtf in Resources */,
+				9BC24974157C24570074F558 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B68E8D313FCB4AC00685A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BCB31B2157C22DD00DB7961 /* VernacularAppDelegate.m in Sources */,
+				9BC2496E157C24310074F558 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B845511157C265200744516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSWebSocket;
+			targetProxy = 9B845510157C265200744516 /* PBXContainerItemProxy */;
+		};
+		9B845513157C265200744516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Renaissance;
+			targetProxy = 9B845512157C265200744516 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BC24968157C24310074F558 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC24969157C24310074F558 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9BC2496A157C24310074F558 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC2496B157C24310074F558 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BC24972157C24570074F558 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BC24973157C24570074F558 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B68E8F313FCB4AC00685A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9B68E8F413FCB4AC00685A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9B68E8F613FCB4AC00685A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
+				INFOPLIST_FILE = "client/Vernacular-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B68E8F713FCB4AC00685A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
+				INFOPLIST_FILE = "client/Vernacular-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B68E8D113FCB4AB00685A32 /* Build configuration list for PBXProject "Vernacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68E8F313FCB4AC00685A32 /* Debug */,
+				9B68E8F413FCB4AC00685A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B68E8F513FCB4AC00685A32 /* Build configuration list for PBXNativeTarget "Vernacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B68E8F613FCB4AC00685A32 /* Debug */,
+				9B68E8F713FCB4AC00685A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B68E8CE13FCB4AB00685A32 /* Project object */;
+}
