@@ -8,93 +8,119 @@
 
 #import "VernacularAppDelegate.h"
 
-
 @implementation VernacularAppDelegate
 
+@synthesize wsa;
+@synthesize connectWindow;
+@synthesize connectUrlTextField;
+@synthesize connectionConsole;
+@synthesize connectButton;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    NSString *path;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    BOOL b;
-    NSOpenPanel *openDialog = [NSOpenPanel openPanel];
+    
+    // Set button for connection as default on enter.
+    [connectButton setKeyEquivalent:@"\r"];
     
     [defaults registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:
                                  @"NO", @"DisplayAutoLayout",
                                  nil]];
-            
-    [openDialog setCanChooseFiles:YES];
-    [openDialog setCanChooseDirectories:NO];
+                    
+
+    [connectWindow makeKeyAndOrderFront:self];
+    [[self connectButton] setEnabled:NO];
     
-    if ([openDialog runModalForDirectory:nil file:nil] == NSOKButton) {
-        NSArray  *files = [openDialog filenames];
-        path = [files objectAtIndex:0];
-    }
+    // Temporary, perhaps. Used to validate programatically set text in the URL field, as if it were
+    // user entered.
+    [connectUrlTextField setStringValue:@"ws://localhost:9000/"];
+    [connectUrlTextField isValidUrl];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NSControlTextDidChangeNotification
+                                                        object:connectUrlTextField userInfo:nil];
     
-    [[NSApplication sharedApplication] setDelegate: [self initWithFile: path]];
     
-    NSLog (@"Loading %@", fileName);
-    b = [NSBundle loadGSMarkupFile: fileName
-                 externalNameTable: [NSDictionary dictionaryWithObject: self  
-                                                                forKey: @"NSOwner"]
-                          withZone: NULL];
+    // Pipe all stderr output to our console window.
+    pipe = [NSPipe pipe] ;
+    pipeReadHandle = [pipe fileHandleForReading];
+    dup2([[pipe fileHandleForWriting] fileDescriptor], STDERR_FILENO) ;
     
-    //[pool drain];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(writeToConsoleWindow:)
+                                                 name:NSFileHandleReadCompletionNotification
+                                               object:pipeReadHandle];
     
-    if (b) {
-        NSLog (@"%@ loaded!", fileName);
+    [pipeReadHandle readInBackgroundAndNotify];
+
+}
+
+
+
+#pragma mark IBActions
+- (IBAction)connectToVernacularServer:(id)sender
+{
+    [connectWindow close];
+    
+    // connectUrlTextField at this point has been pre-validated.
+    NSLog(@"Connecting to: %@",[connectUrlTextField stringValue]);
+    appUrl = [NSURL URLWithString:[connectUrlTextField stringValue]];
+    wsa = [RSWebSocketApplication webSocketApplicationConnectWithUrl:[connectUrlTextField stringValue]  delegate:self];
+}
+
+#pragma mark WebSocketApplication Delegate
+- (void)didWelcome
+{
+    rpcUri   = @"http://example.com/simple/calculator#";
+    rpcCurie = @"calculator";
+    
+    [wsa sendPrefixMessage:rpcCurie uri:rpcUri];
+    
+    // Call for main RIB (Renaissance Interface Builder) data
+    NSString *call = [NSString stringWithFormat:@"%@:mainRibData", rpcCurie];
+    [wsa sendCallMessage:call target:self selector:@selector(localDispatch:) args:[NSArray arrayWithObjects: nil]];
+}
+
+#pragma mark NSControl Delegate
+- (void)controlTextDidChange:(NSNotification *)aNotification
+{
+    RSURLField *textField = [aNotification object];
+    
+    if ([textField isValidUrl]) {
+        [[self connectButton] setEnabled:YES];
     } else {
-        NSLog (@"Could not load %@!", fileName);
-        exit (1);
-    }
-    [NSApp run];
-}
-
-- (id) initWithFile: (NSString *)f {
-    [ f retain]; [fileName release]; fileName =  f;
-    return self;
-}
-
-- (void) dealloc {
-    [fileName release];
-    [super dealloc];
-}
-
-- (void) dummyAction: (id)aSender {
-    NSLog (@"Dummy action invoked by %@", aSender);
-}
-
-- (void) setValue: (id)anObject  forUndefinedKey: (NSString*)aKey {
-    NSLog (@"Set value \"%@\" for key \"%@\" of NSOwner", anObject, aKey);
-}
-
-- (void) bundleDidLoadGSMarkup: (NSNotification *)aNotification {
-    /* You can turn on DisplayAutoLayout by setting it in the user
-     * defaults ('defaults write NSGlobalDomain DisplayAutoLayout
-     * YES'), or by passing it on the command line ('openapp
-     * GSMarkupBrowser.app file.gsmarkup -DisplayAutoLayout YES').
-     */
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"DisplayAutoLayout"]) {
-        NSArray *topLevelObjects;
-        u_long i, count;
-        
-        topLevelObjects = [[aNotification userInfo] objectForKey: 
-                           @"NSTopLevelObjects"];
-        
-        /* Now enumerate the top-level objects.  If there is any
-         * NSWindow or NSView, mark it as displaying autolayout
-         * containers.
-         */
-        count = [topLevelObjects count];
-        
-        for (i = 0; i < count; i++) {
-            id object = [topLevelObjects objectAtIndex: i];
-            if ([object isKindOfClass: [NSWindow class]]
-                || [object isKindOfClass: [NSView class]])
-            {
-                [(NSWindow *)object setDisplayAutoLayoutContainers: YES];
-            }
-        }
+        [[self connectButton] setEnabled:NO];
     }
 }
 
+#pragma mark Utility
+- (void) writeToConsoleWindow: (NSNotification *) aNotification {
+    [pipeReadHandle readInBackgroundAndNotify];
+    
+    NSString *str = [[NSString alloc] initWithData: [[aNotification userInfo] objectForKey: NSFileHandleNotificationDataItem]
+                                          encoding: NSASCIIStringEncoding] ;
+    
+    // Get text storage of the NSTextView and append text to it.
+	NSAttributedString *string = [[NSAttributedString alloc] initWithString:str];
+	NSTextStorage *storage = [connectionConsole textStorage];
+    
+	[storage beginEditing];
+	[storage appendAttributedString:string];
+	[storage endEditing];
+    
+    // Scroll to bottom after appending
+    NSRange end_pos = NSMakeRange([storage length], 0);
+    [connectionConsole scrollRangeToVisible:end_pos];
+}
 
+- (void) didEvent:(NSString*)topicUri event:(id)event
+{
+    NSLog(@"Received event! %@ %@",topicUri, event);
+    [vdelegate delegateCallBack:[NSURL URLWithString:topicUri] event:event];
+}
+
+- (void) localDispatch: (id)value {
+
+    vdelegate = [[VDelegateManager alloc] initWithGSMarkupData:[value dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [[NSApplication sharedApplication] setDelegate: self];
+
+}
 @end

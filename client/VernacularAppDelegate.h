@@ -7,26 +7,36 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#ifdef GNUSTEP
-/* When compiling on-site, on GNUstep the headers are not installed
- * yet.  */
-# include "Renaissance.h"
-#else
-/* Here compiling on-site is simply not supported :-).  */
-#include <Renaissance/Renaissance.h>
+#import <RSWebSocketApplication/RSWebSocketApplication.h>
+#import "RSURLField.h"
+#import "VDelegateManager.h"
 
-#endif
-
-@interface VernacularAppDelegate : NSObject <NSApplicationDelegate> {
+@interface VernacularAppDelegate : NSObject <NSApplicationDelegate,RSWebSocketApplication> {
     NSString *fileName;
+    NSURL *appUrl;
+    
+    // WebSocket related
+    NSString* response;
+    
+    // Console
+    NSPipe *pipe;
+    NSFileHandle *pipeReadHandle;
+    
+    // temporary work
+    NSString *rpcUri;
+    NSString *rpcCurie;
+    
+    // Proxy for our delegate manager
+    VDelegateManager *vdelegate;
 }
 
-- (id) initWithFile: (NSString *)f;
-- (void) setValue: (id)anObject  forUndefinedKey: (NSString *)aKey;
-/* A dummy action method that you can use in your gsmarkup files
- * to test sending an action to the #NSOwner.  */
-- (void) dummyAction: (id)aSender;
-- (void) bundleDidLoadGSMarkup: (NSNotification *)aNotification;
-- (void)applicationDidFinishLaunching: (NSNotification *)aNotification;
+// Property Declarations
+@property (retain)           RSWebSocketApplication* wsa;
+@property (assign) IBOutlet  NSWindow *connectWindow;
+@property (assign) IBOutlet  RSURLField *connectUrlTextField;
+@property (assign) IBOutlet  NSButton *connectButton;
+@property (assign) IBOutlet  NSTextView *connectionConsole;
 
+// Public Method Delcarations
+- (void)applicationDidFinishLaunching: (NSNotification *)aNotification;
 @end

@@ -7,31 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B68E8DC13FCB4AC00685A32 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */; };
-		9B845514157C267C00744516 /* RSWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCB318C157C183D00DB7961 /* RSWebSocket.framework */; };
-		9B845515157C268300744516 /* Renaissance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
-		9BC2496C157C24310074F558 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24968157C24310074F558 /* Credits.rtf */; };
-		9BC2496E157C24310074F558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB3198157C221800DB7961 /* main.m */; };
-		9BC24974157C24570074F558 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24972157C24570074F558 /* MainMenu.xib */; };
-		9BCB3195157C1ACB00DB7961 /* Renaissance.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
-		9BCB3196157C1AD100DB7961 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BCB318C157C183D00DB7961 /* RSWebSocket.framework */; };
-		9BCB31B2157C22DD00DB7961 /* VernacularAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */; };
+		9B1DE094162758C90081A0FF /* Renaissance.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
+		9B1DE095162758C90081A0FF /* RSWebSocketApplication.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */; };
+		9B30C02815EBE93B003B6AB5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */; };
+		9B30C04215EBE94C003B6AB5 /* VernacularAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */; };
+		9B30C04315EBE987003B6AB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB3198157C221800DB7961 /* main.m */; };
+		9B30C04415EBE992003B6AB5 /* Renaissance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
+		9B30C04515EBE992003B6AB5 /* RSWebSocketApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */; };
+		9B30C04615EBE99B003B6AB5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24968157C24310074F558 /* Credits.rtf */; };
+		9B30C04715EBE99B003B6AB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC2496A157C24310074F558 /* InfoPlist.strings */; };
+		9B30C04815EBEF3E003B6AB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24972157C24570074F558 /* MainMenu.xib */; };
+		9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */; };
+		9B30C04E15F2A2D2003B6AB5 /* exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B30C04C15F2A2D2003B6AB5 /* exclamation.png */; };
+		9B30C04F15F2A2D2003B6AB5 /* exclamation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */; };
+		9B669ADD1603DCD4006D5E51 /* VDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B845510157C265200744516 /* PBXContainerItemProxy */ = {
+		9B0BE80615B896760080ADC7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B19FC6F14D615E100D8F2CB;
-			remoteInfo = RSWebSocket;
+			containerPortal = 9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B0BE7C515B8964B0080ADC7;
+			remoteInfo = RSWebSocketApplication;
 		};
-		9B845512157C265200744516 /* PBXContainerItemProxy */ = {
+		9B0BE80815B896760080ADC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B0BE7DD15B8964B0080ADC7;
+			remoteInfo = RSWebSocketApplicationTests;
+		};
+		9B30C01D15EBE8DB003B6AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B30BFEB15EBE8C1003B6AB5;
+			remoteInfo = Test;
+		};
+		9B30C03E15EBE946003B6AB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9BF7579C141453E000EDFE39;
 			remoteInfo = Renaissance;
+		};
+		9B30C04015EBE946003B6AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B0BE7C415B8964B0080ADC7;
+			remoteInfo = RSWebSocketApplication;
 		};
 		9B95E580157C17F3009493DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -47,61 +73,44 @@
 			remoteGlobalIDString = 9BF757B5141453E000EDFE39;
 			remoteInfo = RenaissanceTests;
 		};
-		9BCB318B157C183D00DB7961 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9B19FC7014D615E100D8F2CB;
-			remoteInfo = RSWebSocket;
-		};
-		9BCB318D157C183D00DB7961 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9B19FC8814D615E100D8F2CB;
-			remoteInfo = RSWebSocketTests;
-		};
-		9BCB318F157C183D00DB7961 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9BFD3AB41537D5D100F9A1F2;
-			remoteInfo = AutobahnTests;
-		};
-		9BCB3191157C183D00DB7961 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9BFD3A951537793000F9A1F2;
-			remoteInfo = Echo;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9B35664F141449D500C72916 /* CopyFiles */ = {
+		9B1DE093162758BC0081A0FF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9BCB3196157C1AD100DB7961 /* RSWebSocket.framework in CopyFiles */,
-				9BCB3195157C1ACB00DB7961 /* Renaissance.framework in CopyFiles */,
+				9B1DE094162758C90081A0FF /* Renaissance.framework in CopyFiles */,
+				9B1DE095162758C90081A0FF /* RSWebSocketApplication.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9B68E8D713FCB4AC00685A32 /* Vernacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vernacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSWebSocketApplication.xcodeproj; path = ../RSWebSocketApplication/RSWebSocketApplication.xcodeproj; sourceTree = "<group>"; };
+		9B30BFE115EBE871003B6AB5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9B30BFE215EBE871003B6AB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9B30BFE315EBE871003B6AB5 /* server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
+		9B30C02615EBE93B003B6AB5 /* Vernacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vernacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B30C04915EC1EB0003B6AB5 /* RSURLField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSURLField.h; path = client/RSURLField.h; sourceTree = SOURCE_ROOT; };
+		9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSURLField.m; path = client/RSURLField.m; sourceTree = SOURCE_ROOT; };
+		9B30C04C15F2A2D2003B6AB5 /* exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exclamation.png; sourceTree = "<group>"; };
+		9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation@2x.png"; sourceTree = "<group>"; };
+		9B669ADB1603DCD4006D5E51 /* VDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VDelegateManager.h; path = client/VDelegateManager.h; sourceTree = SOURCE_ROOT; };
+		9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VDelegateManager.m; path = client/VDelegateManager.m; sourceTree = SOURCE_ROOT; };
 		9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9B68E8DE13FCB4AC00685A32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9B68E8DF13FCB4AC00685A32 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9B68E8E013FCB4AC00685A32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9B84551A157C282E00744516 /* echo_server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = echo_server.py; sourceTree = "<group>"; };
+		9B87846A15E43192000264F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
 		9BC24969157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = client/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		9BC2496B157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = client/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		9BC24973157C24570074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = client/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
-		9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSWebSocket.xcodeproj; path = ../RSWebSocket/RSWebSocket.xcodeproj; sourceTree = "<group>"; };
 		9BCB3198157C221800DB7961 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = client/main.m; sourceTree = SOURCE_ROOT; };
 		9BCB3199157C221800DB7961 /* Vernacular-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Vernacular-Info.plist"; path = "client/Vernacular-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9BCB319A157C221800DB7961 /* Vernacular-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Vernacular-Prefix.pch"; path = "client/Vernacular-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -110,34 +119,70 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B68E8D413FCB4AC00685A32 /* Frameworks */ = {
+		9B30C02315EBE93B003B6AB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B68E8DC13FCB4AC00685A32 /* Cocoa.framework in Frameworks */,
-				9B845514157C267C00744516 /* RSWebSocket.framework in Frameworks */,
-				9B845515157C268300744516 /* Renaissance.framework in Frameworks */,
+				9B30C04415EBE992003B6AB5 /* Renaissance.framework in Frameworks */,
+				9B30C04515EBE992003B6AB5 /* RSWebSocketApplication.framework in Frameworks */,
+				9B30C02815EBE93B003B6AB5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0BE7F615B896760080ADC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */,
+				9B0BE80915B896760080ADC7 /* RSWebSocketApplicationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B30BFE015EBE871003B6AB5 /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9B30BFE115EBE871003B6AB5 /* index.html */,
+				9B30BFE215EBE871003B6AB5 /* README.md */,
+				9B30BFE315EBE871003B6AB5 /* server.py */,
+			);
+			path = calculator;
+			sourceTree = "<group>";
+		};
+		9B30C02915EBE93B003B6AB5 /* Vernacular client */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */,
+				9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */,
+				9B669ADB1603DCD4006D5E51 /* VDelegateManager.h */,
+				9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */,
+				9B30C04915EC1EB0003B6AB5 /* RSURLField.h */,
+				9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */,
+				9BC24972157C24570074F558 /* MainMenu.xib */,
+				9B68E8E213FCB4AC00685A32 /* Supporting Files */,
+			);
+			name = "Vernacular client";
+			path = Vernacular;
+			sourceTree = "<group>";
+		};
 		9B68E8CC13FCB4AB00685A32 = {
 			isa = PBXGroup;
 			children = (
-				9B68E8E113FCB4AC00685A32 /* Vernacular */,
+				9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */,
+				9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */,
+				9B845516157C282E00744516 /* Vernacular servers */,
+				9B30C02915EBE93B003B6AB5 /* Vernacular client */,
 				9B68E8DA13FCB4AC00685A32 /* Frameworks */,
 				9B68E8D813FCB4AC00685A32 /* Products */,
-				9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */,
-				9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
 		9B68E8D813FCB4AC00685A32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B68E8D713FCB4AC00685A32 /* Vernacular.app */,
+				9B30C02615EBE93B003B6AB5 /* Vernacular.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */,
+				9B87846A15E43192000264F8 /* SenTestingKit.framework */,
 				9B68E8DD13FCB4AC00685A32 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -161,20 +207,11 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		9B68E8E113FCB4AC00685A32 /* Vernacular */ = {
-			isa = PBXGroup;
-			children = (
-				9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */,
-				9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */,
-				9BC24972157C24570074F558 /* MainMenu.xib */,
-				9B68E8E213FCB4AC00685A32 /* Supporting Files */,
-			);
-			path = Vernacular;
-			sourceTree = "<group>";
-		};
 		9B68E8E213FCB4AC00685A32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B30C04C15F2A2D2003B6AB5 /* exclamation.png */,
+				9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */,
 				9BC24968157C24310074F558 /* Credits.rtf */,
 				9BC2496A157C24310074F558 /* InfoPlist.strings */,
 				9BCB3198157C221800DB7961 /* main.m */,
@@ -184,22 +221,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9B845516157C282E00744516 /* Vernacular servers */ = {
+			isa = PBXGroup;
+			children = (
+				9B30BFE015EBE871003B6AB5 /* calculator */,
+				9B845517157C282E00744516 /* echo */,
+			);
+			name = "Vernacular servers";
+			path = servers;
+			sourceTree = SOURCE_ROOT;
+		};
+		9B845517157C282E00744516 /* echo */ = {
+			isa = PBXGroup;
+			children = (
+				9B84551A157C282E00744516 /* echo_server.py */,
+			);
+			path = echo;
+			sourceTree = "<group>";
+		};
 		9B95E57C157C17F3009493DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				9B95E581157C17F3009493DE /* Renaissance.framework */,
 				9B95E583157C17F3009493DE /* RenaissanceTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9BCB3185157C183D00DB7961 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9BCB318C157C183D00DB7961 /* RSWebSocket.framework */,
-				9BCB318E157C183D00DB7961 /* RSWebSocketTests.octest */,
-				9BCB3190157C183D00DB7961 /* AutobahnTests.app */,
-				9BCB3192157C183D00DB7961 /* Echo.app */,
+				9B30C01E15EBE8DB003B6AB5 /* Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,24 +252,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B68E8D613FCB4AC00685A32 /* Vernacular */ = {
+		9B30C02515EBE93B003B6AB5 /* Vernacular */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B68E8F513FCB4AC00685A32 /* Build configuration list for PBXNativeTarget "Vernacular" */;
+			buildConfigurationList = 9B30C03B15EBE93C003B6AB5 /* Build configuration list for PBXNativeTarget "Vernacular" */;
 			buildPhases = (
-				9B68E8D313FCB4AC00685A32 /* Sources */,
-				9B68E8D413FCB4AC00685A32 /* Frameworks */,
-				9B68E8D513FCB4AC00685A32 /* Resources */,
-				9B35664F141449D500C72916 /* CopyFiles */,
+				9B30C02215EBE93B003B6AB5 /* Sources */,
+				9B30C02315EBE93B003B6AB5 /* Frameworks */,
+				9B30C02415EBE93B003B6AB5 /* Resources */,
+				9B1DE093162758BC0081A0FF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B845511157C265200744516 /* PBXTargetDependency */,
-				9B845513157C265200744516 /* PBXTargetDependency */,
+				9B30C03F15EBE946003B6AB5 /* PBXTargetDependency */,
+				9B30C04115EBE946003B6AB5 /* PBXTargetDependency */,
 			);
 			name = Vernacular;
 			productName = Vernacular;
-			productReference = 9B68E8D713FCB4AC00685A32 /* Vernacular.app */;
+			productReference = 9B30C02615EBE93B003B6AB5 /* Vernacular.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,6 +286,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 9B68E8CC13FCB4AB00685A32;
 			productRefGroup = 9B68E8D813FCB4AC00685A32 /* Products */;
@@ -251,18 +297,39 @@
 					ProjectRef = 9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */;
 				},
 				{
-					ProductGroup = 9BCB3185157C183D00DB7961 /* Products */;
-					ProjectRef = 9BCB3184157C183D00DB7961 /* RSWebSocket.xcodeproj */;
+					ProductGroup = 9B0BE7F615B896760080ADC7 /* Products */;
+					ProjectRef = 9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				9B68E8D613FCB4AC00685A32 /* Vernacular */,
+				9B30C02515EBE93B003B6AB5 /* Vernacular */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSWebSocketApplication.framework;
+			remoteRef = 9B0BE80615B896760080ADC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9B0BE80915B896760080ADC7 /* RSWebSocketApplicationTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RSWebSocketApplicationTests.octest;
+			remoteRef = 9B0BE80815B896760080ADC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9B30C01E15EBE8DB003B6AB5 /* Test.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Test.app;
+			remoteRef = 9B30C01D15EBE8DB003B6AB5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9B95E581157C17F3009493DE /* Renaissance.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -277,70 +344,47 @@
 			remoteRef = 9B95E582157C17F3009493DE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9BCB318C157C183D00DB7961 /* RSWebSocket.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RSWebSocket.framework;
-			remoteRef = 9BCB318B157C183D00DB7961 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9BCB318E157C183D00DB7961 /* RSWebSocketTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RSWebSocketTests.octest;
-			remoteRef = 9BCB318D157C183D00DB7961 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9BCB3190157C183D00DB7961 /* AutobahnTests.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = AutobahnTests.app;
-			remoteRef = 9BCB318F157C183D00DB7961 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9BCB3192157C183D00DB7961 /* Echo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Echo.app;
-			remoteRef = 9BCB3191157C183D00DB7961 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B68E8D513FCB4AC00685A32 /* Resources */ = {
+		9B30C02415EBE93B003B6AB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BC2496C157C24310074F558 /* Credits.rtf in Resources */,
-				9BC24974157C24570074F558 /* MainMenu.xib in Resources */,
+				9B30C04615EBE99B003B6AB5 /* Credits.rtf in Resources */,
+				9B30C04715EBE99B003B6AB5 /* InfoPlist.strings in Resources */,
+				9B30C04815EBEF3E003B6AB5 /* MainMenu.xib in Resources */,
+				9B30C04E15F2A2D2003B6AB5 /* exclamation.png in Resources */,
+				9B30C04F15F2A2D2003B6AB5 /* exclamation@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B68E8D313FCB4AC00685A32 /* Sources */ = {
+		9B30C02215EBE93B003B6AB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BCB31B2157C22DD00DB7961 /* VernacularAppDelegate.m in Sources */,
-				9BC2496E157C24310074F558 /* main.m in Sources */,
+				9B30C04215EBE94C003B6AB5 /* VernacularAppDelegate.m in Sources */,
+				9B30C04315EBE987003B6AB5 /* main.m in Sources */,
+				9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */,
+				9B669ADD1603DCD4006D5E51 /* VDelegateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B845511157C265200744516 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RSWebSocket;
-			targetProxy = 9B845510157C265200744516 /* PBXContainerItemProxy */;
-		};
-		9B845513157C265200744516 /* PBXTargetDependency */ = {
+		9B30C03F15EBE946003B6AB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Renaissance;
-			targetProxy = 9B845512157C265200744516 /* PBXContainerItemProxy */;
+			targetProxy = 9B30C03E15EBE946003B6AB5 /* PBXContainerItemProxy */;
+		};
+		9B30C04115EBE946003B6AB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSWebSocketApplication;
+			targetProxy = 9B30C04015EBE946003B6AB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -372,6 +416,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9B30C03C15EBE93C003B6AB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "client/Vernacular-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B30C03D15EBE93C003B6AB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "client/Vernacular-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		9B68E8F313FCB4AC00685A32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,57 +495,23 @@
 			};
 			name = Release;
 		};
-		9B68E8F613FCB4AC00685A32 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
-				INFOPLIST_FILE = "client/Vernacular-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		9B68E8F713FCB4AC00685A32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "client/Vernacular-Prefix.pch";
-				INFOPLIST_FILE = "client/Vernacular-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B30C03B15EBE93C003B6AB5 /* Build configuration list for PBXNativeTarget "Vernacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B30C03C15EBE93C003B6AB5 /* Debug */,
+				9B30C03D15EBE93C003B6AB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9B68E8D113FCB4AB00685A32 /* Build configuration list for PBXProject "Vernacular" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B68E8F313FCB4AC00685A32 /* Debug */,
 				9B68E8F413FCB4AC00685A32 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9B68E8F513FCB4AC00685A32 /* Build configuration list for PBXNativeTarget "Vernacular" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B68E8F613FCB4AC00685A32 /* Debug */,
-				9B68E8F713FCB4AC00685A32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
