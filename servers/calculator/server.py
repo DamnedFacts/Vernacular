@@ -78,7 +78,7 @@ class CalculatorServerProtocol(WampServerProtocol):
             self.operand_2 = 0
             print self.total
         self.dispatch("http://example.com/simple/calculator#textField.setStringValue", self.total, exclude = [], eligible = None)
-        return total
+        return self.total
 
 '''
     @exportRpc
