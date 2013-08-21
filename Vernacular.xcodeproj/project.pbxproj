@@ -10,17 +10,33 @@
 		9B1DE094162758C90081A0FF /* Renaissance.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
 		9B1DE095162758C90081A0FF /* RSWebSocketApplication.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */; };
 		9B30C02815EBE93B003B6AB5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */; };
-		9B30C04215EBE94C003B6AB5 /* VernacularAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */; };
-		9B30C04315EBE987003B6AB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB3198157C221800DB7961 /* main.m */; };
+		9B30C04215EBE94C003B6AB5 /* VAMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB31A2157C225000DB7961 /* VAMain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9B30C04315EBE987003B6AB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB3198157C221800DB7961 /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9B30C04415EBE992003B6AB5 /* Renaissance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B95E581157C17F3009493DE /* Renaissance.framework */; };
 		9B30C04515EBE992003B6AB5 /* RSWebSocketApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0BE80715B896760080ADC7 /* RSWebSocketApplication.framework */; };
 		9B30C04615EBE99B003B6AB5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24968157C24310074F558 /* Credits.rtf */; };
 		9B30C04715EBE99B003B6AB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BC2496A157C24310074F558 /* InfoPlist.strings */; };
 		9B30C04815EBEF3E003B6AB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC24972157C24570074F558 /* MainMenu.xib */; };
-		9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */; };
+		9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9B30C04E15F2A2D2003B6AB5 /* exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B30C04C15F2A2D2003B6AB5 /* exclamation.png */; };
 		9B30C04F15F2A2D2003B6AB5 /* exclamation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */; };
-		9B669ADD1603DCD4006D5E51 /* VDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */; };
+		9B83BE86178B923F00BFFBBD /* NSLogConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B83BE85178B923F00BFFBBD /* NSLogConsole.xib */; };
+		9B83BE98178B942F00BFFBBD /* NSLogConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BE94178B924E00BFFBBD /* NSLogConsole.m */; };
+		9B83BE9A178B94A800BFFBBD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B83BE99178B94A800BFFBBD /* WebKit.framework */; };
+		9B83BE9B178B995500BFFBBD /* NSLogConsole.html in Resources */ = {isa = PBXBuildFile; fileRef = 9B83BE93178B924E00BFFBBD /* NSLogConsole.html */; };
+		9B83BEA11792034C00BFFBBD /* GenericWSApplicationIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9B83BEA01792034C00BFFBBD /* GenericWSApplicationIcon.icns */; };
+		9B83BEAF179204F400BFFBBD /* History.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B83BEA3179204F400BFFBBD /* History.txt */; };
+		9B83BEB0179204F400BFFBBD /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B83BEA4179204F400BFFBBD /* License.txt */; };
+		9B83BEB1179204F400BFFBBD /* NSBezierPath+RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEA6179204F400BFFBBD /* NSBezierPath+RoundRect.m */; };
+		9B83BEB2179204F400BFFBBD /* NSImage-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEA8179204F400BFFBBD /* NSImage-Extras.m */; };
+		9B83BEB3179204F400BFFBBD /* NSSortDescriptor+Layers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAA179204F400BFFBBD /* NSSortDescriptor+Layers.m */; };
+		9B83BEB4179204F400BFFBBD /* THCanvasItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAC179204F400BFFBBD /* THCanvasItem.m */; };
+		9B83BEB5179204F400BFFBBD /* THCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAE179204F400BFFBBD /* THCanvasView.m */; };
+		9B83BEB8179207E100BFFBBD /* VAAppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEB7179207E100BFFBBD /* VAAppListController.m */; };
+		9BF0613817A8980000A13FDA /* AppServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0613717A8980000A13FDA /* AppServer.py */; };
+		9BF0613B17A9685300A13FDA /* ApplicationShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613A17A9685300A13FDA /* ApplicationShim.m */; };
+		9BF0613E17B9781B00A13FDA /* ControllerShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613D17B9781B00A13FDA /* ControllerShim.m */; };
+		9BFAD3BD17A70B5D001FCAD2 /* VADefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,19 +109,37 @@
 		9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSWebSocketApplication.xcodeproj; path = ../RSWebSocketApplication/RSWebSocketApplication.xcodeproj; sourceTree = "<group>"; };
 		9B30BFE115EBE871003B6AB5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		9B30BFE215EBE871003B6AB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		9B30BFE315EBE871003B6AB5 /* server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = server.py; sourceTree = "<group>"; };
+		9B30BFE315EBE871003B6AB5 /* calculator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = calculator.py; sourceTree = "<group>"; };
 		9B30C02615EBE93B003B6AB5 /* Vernacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vernacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B30C04915EC1EB0003B6AB5 /* RSURLField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSURLField.h; path = client/RSURLField.h; sourceTree = SOURCE_ROOT; };
 		9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSURLField.m; path = client/RSURLField.m; sourceTree = SOURCE_ROOT; };
 		9B30C04C15F2A2D2003B6AB5 /* exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exclamation.png; sourceTree = "<group>"; };
 		9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation@2x.png"; sourceTree = "<group>"; };
-		9B669ADB1603DCD4006D5E51 /* VDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VDelegateManager.h; path = client/VDelegateManager.h; sourceTree = SOURCE_ROOT; };
-		9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VDelegateManager.m; path = client/VDelegateManager.m; sourceTree = SOURCE_ROOT; };
 		9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9B68E8DE13FCB4AC00685A32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9B68E8DF13FCB4AC00685A32 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9B68E8E013FCB4AC00685A32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9B84551A157C282E00744516 /* echo_server.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = echo_server.py; sourceTree = "<group>"; };
+		9B83BE85178B923F00BFFBBD /* NSLogConsole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLogConsole.xib; sourceTree = "<group>"; };
+		9B83BE92178B924E00BFFBBD /* NSLogConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSLogConsole.h; sourceTree = "<group>"; };
+		9B83BE93178B924E00BFFBBD /* NSLogConsole.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = NSLogConsole.html; sourceTree = "<group>"; };
+		9B83BE94178B924E00BFFBBD /* NSLogConsole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSLogConsole.m; sourceTree = "<group>"; };
+		9B83BE99178B94A800BFFBBD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9B83BEA01792034C00BFFBBD /* GenericWSApplicationIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GenericWSApplicationIcon.icns; sourceTree = "<group>"; };
+		9B83BEA3179204F400BFFBBD /* History.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = History.txt; sourceTree = "<group>"; };
+		9B83BEA4179204F400BFFBBD /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		9B83BEA5179204F400BFFBBD /* NSBezierPath+RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+RoundRect.h"; sourceTree = "<group>"; };
+		9B83BEA6179204F400BFFBBD /* NSBezierPath+RoundRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+RoundRect.m"; sourceTree = "<group>"; };
+		9B83BEA7179204F400BFFBBD /* NSImage-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage-Extras.h"; sourceTree = "<group>"; };
+		9B83BEA8179204F400BFFBBD /* NSImage-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage-Extras.m"; sourceTree = "<group>"; };
+		9B83BEA9179204F400BFFBBD /* NSSortDescriptor+Layers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSortDescriptor+Layers.h"; sourceTree = "<group>"; };
+		9B83BEAA179204F400BFFBBD /* NSSortDescriptor+Layers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSortDescriptor+Layers.m"; sourceTree = "<group>"; };
+		9B83BEAB179204F400BFFBBD /* THCanvasItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCanvasItem.h; sourceTree = "<group>"; };
+		9B83BEAC179204F400BFFBBD /* THCanvasItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCanvasItem.m; sourceTree = "<group>"; };
+		9B83BEAD179204F400BFFBBD /* THCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCanvasView.h; sourceTree = "<group>"; };
+		9B83BEAE179204F400BFFBBD /* THCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCanvasView.m; sourceTree = "<group>"; };
+		9B83BEB6179207E100BFFBBD /* VAAppListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAAppListController.h; path = client/VAAppListController.h; sourceTree = SOURCE_ROOT; };
+		9B83BEB7179207E100BFFBBD /* VAAppListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAAppListController.m; path = client/VAAppListController.m; sourceTree = SOURCE_ROOT; };
+		9B84551A157C282E00744516 /* Echo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Echo.py; sourceTree = "<group>"; };
 		9B87846A15E43192000264F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
 		9BC24969157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = client/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
@@ -114,8 +148,15 @@
 		9BCB3198157C221800DB7961 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = client/main.m; sourceTree = SOURCE_ROOT; };
 		9BCB3199157C221800DB7961 /* Vernacular-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Vernacular-Info.plist"; path = "client/Vernacular-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9BCB319A157C221800DB7961 /* Vernacular-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Vernacular-Prefix.pch"; path = "client/Vernacular-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VernacularAppDelegate.h; path = client/VernacularAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VernacularAppDelegate.m; path = client/VernacularAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		9BCB31A1157C225000DB7961 /* VAMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMain.h; path = client/VAMain.h; sourceTree = SOURCE_ROOT; };
+		9BCB31A2157C225000DB7961 /* VAMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMain.m; path = client/VAMain.m; sourceTree = SOURCE_ROOT; };
+		9BF0613717A8980000A13FDA /* AppServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AppServer.py; sourceTree = "<group>"; };
+		9BF0613917A9685300A13FDA /* ApplicationShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationShim.h; path = client/ApplicationShim.h; sourceTree = SOURCE_ROOT; };
+		9BF0613A17A9685300A13FDA /* ApplicationShim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationShim.m; path = client/ApplicationShim.m; sourceTree = SOURCE_ROOT; };
+		9BF0613C17B9781B00A13FDA /* ControllerShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllerShim.h; path = client/ControllerShim.h; sourceTree = SOURCE_ROOT; };
+		9BF0613D17B9781B00A13FDA /* ControllerShim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllerShim.m; path = client/ControllerShim.m; sourceTree = SOURCE_ROOT; };
+		9BFAD3BB17A70B5D001FCAD2 /* VADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VADefines.h; path = client/VADefines.h; sourceTree = SOURCE_ROOT; };
+		9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VADefines.m; path = client/VADefines.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B83BE9A178B94A800BFFBBD /* WebKit.framework in Frameworks */,
 				9B30C04415EBE992003B6AB5 /* Renaissance.framework in Frameworks */,
 				9B30C04515EBE992003B6AB5 /* RSWebSocketApplication.framework in Frameworks */,
 				9B30C02815EBE93B003B6AB5 /* Cocoa.framework in Frameworks */,
@@ -146,7 +188,7 @@
 			children = (
 				9B30BFE115EBE871003B6AB5 /* index.html */,
 				9B30BFE215EBE871003B6AB5 /* README.md */,
-				9B30BFE315EBE871003B6AB5 /* server.py */,
+				9B30BFE315EBE871003B6AB5 /* calculator.py */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -154,12 +196,16 @@
 		9B30C02915EBE93B003B6AB5 /* Vernacular client */ = {
 			isa = PBXGroup;
 			children = (
-				9BCB31A1157C225000DB7961 /* VernacularAppDelegate.h */,
-				9BCB31A2157C225000DB7961 /* VernacularAppDelegate.m */,
-				9B669ADB1603DCD4006D5E51 /* VDelegateManager.h */,
-				9B669ADC1603DCD4006D5E51 /* VDelegateManager.m */,
-				9B30C04915EC1EB0003B6AB5 /* RSURLField.h */,
-				9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */,
+				9BCB31A1157C225000DB7961 /* VAMain.h */,
+				9BCB31A2157C225000DB7961 /* VAMain.m */,
+				9B83BEB6179207E100BFFBBD /* VAAppListController.h */,
+				9B83BEB7179207E100BFFBBD /* VAAppListController.m */,
+				9BFAD3BB17A70B5D001FCAD2 /* VADefines.h */,
+				9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */,
+				9BF0613917A9685300A13FDA /* ApplicationShim.h */,
+				9BF0613A17A9685300A13FDA /* ApplicationShim.m */,
+				9BF0613C17B9781B00A13FDA /* ControllerShim.h */,
+				9BF0613D17B9781B00A13FDA /* ControllerShim.m */,
 				9BC24972157C24570074F558 /* MainMenu.xib */,
 				9B68E8E213FCB4AC00685A32 /* Supporting Files */,
 			);
@@ -190,6 +236,7 @@
 		9B68E8DA13FCB4AC00685A32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B83BE99178B94A800BFFBBD /* WebKit.framework */,
 				9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */,
 				9B87846A15E43192000264F8 /* SenTestingKit.framework */,
 				9B68E8DD13FCB4AC00685A32 /* Other Frameworks */,
@@ -210,6 +257,10 @@
 		9B68E8E213FCB4AC00685A32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BFAD3C117A70D18001FCAD2 /* RSURLField */,
+				9B83BEA2179204F400BFFBBD /* CanvasView */,
+				9B83BE84178B922300BFFBBD /* NSLogConsole */,
+				9B83BEA01792034C00BFFBBD /* GenericWSApplicationIcon.icns */,
 				9B30C04C15F2A2D2003B6AB5 /* exclamation.png */,
 				9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */,
 				9BC24968157C24310074F558 /* Credits.rtf */,
@@ -221,9 +272,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9B83BE84178B922300BFFBBD /* NSLogConsole */ = {
+			isa = PBXGroup;
+			children = (
+				9B83BE92178B924E00BFFBBD /* NSLogConsole.h */,
+				9B83BE93178B924E00BFFBBD /* NSLogConsole.html */,
+				9B83BE94178B924E00BFFBBD /* NSLogConsole.m */,
+				9B83BE85178B923F00BFFBBD /* NSLogConsole.xib */,
+			);
+			name = NSLogConsole;
+			sourceTree = "<group>";
+		};
+		9B83BEA2179204F400BFFBBD /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				9B83BEA3179204F400BFFBBD /* History.txt */,
+				9B83BEA4179204F400BFFBBD /* License.txt */,
+				9B83BEA5179204F400BFFBBD /* NSBezierPath+RoundRect.h */,
+				9B83BEA6179204F400BFFBBD /* NSBezierPath+RoundRect.m */,
+				9B83BEA7179204F400BFFBBD /* NSImage-Extras.h */,
+				9B83BEA8179204F400BFFBBD /* NSImage-Extras.m */,
+				9B83BEA9179204F400BFFBBD /* NSSortDescriptor+Layers.h */,
+				9B83BEAA179204F400BFFBBD /* NSSortDescriptor+Layers.m */,
+				9B83BEAB179204F400BFFBBD /* THCanvasItem.h */,
+				9B83BEAC179204F400BFFBBD /* THCanvasItem.m */,
+				9B83BEAD179204F400BFFBBD /* THCanvasView.h */,
+				9B83BEAE179204F400BFFBBD /* THCanvasView.m */,
+			);
+			name = CanvasView;
+			path = "THCanvasView-10";
+			sourceTree = "<group>";
+		};
 		9B845516157C282E00744516 /* Vernacular servers */ = {
 			isa = PBXGroup;
 			children = (
+				9BF0613717A8980000A13FDA /* AppServer.py */,
 				9B30BFE015EBE871003B6AB5 /* calculator */,
 				9B845517157C282E00744516 /* echo */,
 			);
@@ -234,7 +317,7 @@
 		9B845517157C282E00744516 /* echo */ = {
 			isa = PBXGroup;
 			children = (
-				9B84551A157C282E00744516 /* echo_server.py */,
+				9B84551A157C282E00744516 /* Echo.py */,
 			);
 			path = echo;
 			sourceTree = "<group>";
@@ -247,6 +330,15 @@
 				9B30C01E15EBE8DB003B6AB5 /* Test.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9BFAD3C117A70D18001FCAD2 /* RSURLField */ = {
+			isa = PBXGroup;
+			children = (
+				9B30C04915EC1EB0003B6AB5 /* RSURLField.h */,
+				9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */,
+			);
+			name = RSURLField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +370,7 @@
 		9B68E8CE13FCB4AB00685A32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 9B68E8D113FCB4AB00685A32 /* Build configuration list for PBXProject "Vernacular" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -351,11 +443,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B83BE9B178B995500BFFBBD /* NSLogConsole.html in Resources */,
 				9B30C04615EBE99B003B6AB5 /* Credits.rtf in Resources */,
 				9B30C04715EBE99B003B6AB5 /* InfoPlist.strings in Resources */,
 				9B30C04815EBEF3E003B6AB5 /* MainMenu.xib in Resources */,
 				9B30C04E15F2A2D2003B6AB5 /* exclamation.png in Resources */,
 				9B30C04F15F2A2D2003B6AB5 /* exclamation@2x.png in Resources */,
+				9B83BE86178B923F00BFFBBD /* NSLogConsole.xib in Resources */,
+				9B83BEA11792034C00BFFBBD /* GenericWSApplicationIcon.icns in Resources */,
+				9B83BEAF179204F400BFFBBD /* History.txt in Resources */,
+				9B83BEB0179204F400BFFBBD /* License.txt in Resources */,
+				9BF0613817A8980000A13FDA /* AppServer.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +464,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B30C04215EBE94C003B6AB5 /* VernacularAppDelegate.m in Sources */,
+				9B83BE98178B942F00BFFBBD /* NSLogConsole.m in Sources */,
+				9B30C04215EBE94C003B6AB5 /* VAMain.m in Sources */,
 				9B30C04315EBE987003B6AB5 /* main.m in Sources */,
 				9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */,
-				9B669ADD1603DCD4006D5E51 /* VDelegateManager.m in Sources */,
+				9B83BEB1179204F400BFFBBD /* NSBezierPath+RoundRect.m in Sources */,
+				9B83BEB2179204F400BFFBBD /* NSImage-Extras.m in Sources */,
+				9B83BEB3179204F400BFFBBD /* NSSortDescriptor+Layers.m in Sources */,
+				9B83BEB4179204F400BFFBBD /* THCanvasItem.m in Sources */,
+				9B83BEB5179204F400BFFBBD /* THCanvasView.m in Sources */,
+				9B83BEB8179207E100BFFBBD /* VAAppListController.m in Sources */,
+				9BFAD3BD17A70B5D001FCAD2 /* VADefines.m in Sources */,
+				9BF0613B17A9685300A13FDA /* ApplicationShim.m in Sources */,
+				9BF0613E17B9781B00A13FDA /* ControllerShim.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +562,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -469,6 +580,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -481,6 +593,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -489,6 +605,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;

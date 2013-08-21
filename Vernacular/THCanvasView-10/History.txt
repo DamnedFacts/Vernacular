@@ -1,0 +1,4 @@
+THCanvasView
+
+1.0 - October 10, 2007
+Initial release.
