@@ -19,7 +19,6 @@
     NSString *_curiePrefix;
     ControllerShim *_controller;
     RSWebSocketApplication *_wsa;
-    
     NSDictionary *nameTable;
 }
 @property (nonatomic, retain) ControllerShim *controller;

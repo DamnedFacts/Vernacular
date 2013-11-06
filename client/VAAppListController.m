@@ -63,8 +63,8 @@
     [item setDefaultImage: image];
     
     int i = 0;
-    itemBounds = NSMakeRect ( dropPoint.x - halfItemWidth + (i*20),
-                             dropPoint.y + halfItemWidth + (i*20),
+    itemBounds = NSMakeRect (dropPoint.x - imageSize.width,
+                             dropPoint.y + imageSize.height,
                              imageSize.width,
                              imageSize.height );
     

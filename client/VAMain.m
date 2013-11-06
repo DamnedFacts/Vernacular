@@ -21,7 +21,7 @@
 
 - (void)awakeFromNib
 {
-	[NSLogConsole sharedConsole];
+	//[NSLogConsole sharedConsole];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {

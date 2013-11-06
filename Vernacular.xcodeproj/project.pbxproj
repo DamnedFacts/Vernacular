@@ -33,7 +33,7 @@
 		9B83BEB4179204F400BFFBBD /* THCanvasItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAC179204F400BFFBBD /* THCanvasItem.m */; };
 		9B83BEB5179204F400BFFBBD /* THCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAE179204F400BFFBBD /* THCanvasView.m */; };
 		9B83BEB8179207E100BFFBBD /* VAAppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEB7179207E100BFFBBD /* VAAppListController.m */; };
-		9BF0613817A8980000A13FDA /* AppServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 9BF0613717A8980000A13FDA /* AppServer.py */; };
+		9B9F2F5117FBB98300B25CB5 /* NSObject+DumpClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */; };
 		9BF0613B17A9685300A13FDA /* ApplicationShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613A17A9685300A13FDA /* ApplicationShim.m */; };
 		9BF0613E17B9781B00A13FDA /* ControllerShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613D17B9781B00A13FDA /* ControllerShim.m */; };
 		9BFAD3BD17A70B5D001FCAD2 /* VADefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */; };
@@ -115,6 +115,7 @@
 		9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSURLField.m; path = client/RSURLField.m; sourceTree = SOURCE_ROOT; };
 		9B30C04C15F2A2D2003B6AB5 /* exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exclamation.png; sourceTree = "<group>"; };
 		9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation@2x.png"; sourceTree = "<group>"; };
+		9B4C05D01805A457002AAA6F /* OutletWrapper.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OutletWrapper.py; sourceTree = "<group>"; };
 		9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9B68E8DE13FCB4AC00685A32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9B68E8DF13FCB4AC00685A32 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -142,6 +143,8 @@
 		9B84551A157C282E00744516 /* Echo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Echo.py; sourceTree = "<group>"; };
 		9B87846A15E43192000264F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
+		9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DumpClassInfo.m"; sourceTree = "<group>"; };
+		9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DumpClassInfo.h"; sourceTree = "<group>"; };
 		9BC24969157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = client/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		9BC2496B157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = client/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		9BC24973157C24570074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = client/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
@@ -189,6 +192,7 @@
 				9B30BFE115EBE871003B6AB5 /* index.html */,
 				9B30BFE215EBE871003B6AB5 /* README.md */,
 				9B30BFE315EBE871003B6AB5 /* calculator.py */,
+				9B4C05D01805A457002AAA6F /* OutletWrapper.py */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -204,6 +208,8 @@
 				9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */,
 				9BF0613917A9685300A13FDA /* ApplicationShim.h */,
 				9BF0613A17A9685300A13FDA /* ApplicationShim.m */,
+				9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */,
+				9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */,
 				9BF0613C17B9781B00A13FDA /* ControllerShim.h */,
 				9BF0613D17B9781B00A13FDA /* ControllerShim.m */,
 				9BC24972157C24570074F558 /* MainMenu.xib */,
@@ -370,7 +376,7 @@
 		9B68E8CE13FCB4AB00685A32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 9B68E8D113FCB4AB00685A32 /* Build configuration list for PBXProject "Vernacular" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -453,7 +459,6 @@
 				9B83BEA11792034C00BFFBBD /* GenericWSApplicationIcon.icns in Resources */,
 				9B83BEAF179204F400BFFBBD /* History.txt in Resources */,
 				9B83BEB0179204F400BFFBBD /* License.txt in Resources */,
-				9BF0613817A8980000A13FDA /* AppServer.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +471,7 @@
 			files = (
 				9B83BE98178B942F00BFFBBD /* NSLogConsole.m in Sources */,
 				9B30C04215EBE94C003B6AB5 /* VAMain.m in Sources */,
+				9B9F2F5117FBB98300B25CB5 /* NSObject+DumpClassInfo.m in Sources */,
 				9B30C04315EBE987003B6AB5 /* main.m in Sources */,
 				9B30C04B15EC1EB0003B6AB5 /* RSURLField.m in Sources */,
 				9B83BEB1179204F400BFFBBD /* NSBezierPath+RoundRect.m in Sources */,
@@ -561,8 +567,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -580,7 +587,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -592,8 +601,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -605,7 +615,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;

@@ -4,7 +4,7 @@
 
     <objects>
         <!-- the main window -->
-        <window title="Calculator" closable="no">
+        <window title="Calculator" closable="no" id ="CalculatorWindow">
 
             <vbox>
 
@@ -48,6 +48,9 @@
                             <button width="52"  height="24" title="." target="#Controller" action="digit:" />
                             <gridEmptyCell />
                         </gridRow>
+                        <gridRow>
+                            <button width="82" height="24" title="Show Paper Roll" halign="expand" columnSpan="2" target="#Controller" action="showPaperRoll" />
+                        </gridRow>
                     </grid>
                 </hbox>
 
@@ -60,8 +63,8 @@
        In other words, the textField attribute is equivalent to having a
        NSNibOutletConnector with source #Controller, target #TextField,
        and key textField -->
-  <instance instanceOf="ControllerShim" id="Controller" textField="#TextField" />
-
+  <instance instanceOf="ControllerShim" id="Controller" textField="#TextField"
+                                                 calculatorWindow="#CalculatorWindow"/>
 </objects>
 
 <!-- in this example, connectors are not actually needed (or better

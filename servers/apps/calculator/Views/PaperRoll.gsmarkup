@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE gsmarkup>
+<gsmarkup>
+
+    <objects>
+        <!-- the main window -->
+        <window title="Paper Roll" closable="no" x="600" y="200">
+
+            <vbox>
+
+                <textField editable="no" id="TextField" action="setStringValue:" height="300.0" width="200.0"/>
+
+            </vbox>
+
+        </window>
+
+        <!-- an object of a custom class, which is instantiated when the nib
+       is loaded.  Key-value coding is used to set textField to #TextField.
+       In other words, the textField attribute is equivalent to having a
+       NSNibOutletConnector with source #Controller, target #TextField,
+       and key textField -->
+  <instance instanceOf="ControllerShim" id="Controller" textField="#TextField" />
+
+</objects>
+
+<!-- in this example, connectors are not actually needed (or better
+     all connectors are embedded in the objects section) - but we add
+     the connectors section as an example.  -->
+<connectors>
+
+    <!-- an example of a standalone connector, needed to connect the Controller
+       to the controller ivar (or setController: method) of the NSOwner (the
+       object which loaded the nib).  This connector must be standalone
+       because #NSOwner is not inside the nib.  (you can reference objects
+       totally outside the nib in a connector, which are provided by the
+       nameTable dictionary when the nib is loaded) -->
+  <outlet source="#NSOwner" target="#Controller" key="controller" />
+
+</connectors>
+
+</gsmarkup>

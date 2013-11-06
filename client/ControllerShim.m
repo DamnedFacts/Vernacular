@@ -33,23 +33,45 @@
     
     // Set WAMP subscription event for the referencing object outlet connections.
     NSString *topicUri = [NSString stringWithFormat:@"%@:%@.iboutlet", self.curiePrefix, key];
-
     [self.wsa sendSubscribeMessage: topicUri];
+    
+    NSMutableDictionary *methodSignatures = [[NSMutableDictionary alloc] init];
+    [self dumpClassInfo: [self.keyValueStore objectForKey:key] signaturesTable:methodSignatures flattenInheritance:TRUE];
+    
+    NSString *call = [NSString stringWithFormat:@"%@:setRemoteMethodBindingsForObject_",  self.curiePrefix];
+    NSArray  *callArgs = [NSArray arrayWithObjects:@{@"object":key, @"methodSignatures":methodSignatures}, nil];
+    [self.wsa sendCallMessage:call
+                       target:[[NSApp delegate] selectedApp]
+               resultSelector:@selector(handleCallBack:)
+                errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
+                         args:callArgs];
+    
+//    NSData *jsonData;
+//    NSError *e = nil;
+//    jsonData = [NSJSONSerialization dataWithJSONObject:methodSignatures options:kNilOptions error:&e];
+//    if (!jsonData)
+//        NSLog(@"Error parsing JSON string for message: %@", e);
+//    [jsonData writeToURL:[NSURL URLWithString:[NSString stringWithFormat:@"file:///tmp/vernacular-%@-%@-%@.json",
+//                                               self.curiePrefix, key, [anObject class]]]
+//              atomically:YES];
 }
 
 -(IBAction)genericAction:(id)sender {
-    // Remove colon from end of method selector.
+    // Convert colons ":" to underscores "_" in selector names
     NSString *wsaRemoteMethodName = [NSString stringWithUTF8String:sel_getName(_cmd)];
-    if ( [wsaRemoteMethodName length] > 0)
-        wsaRemoteMethodName = [wsaRemoteMethodName substringToIndex:[wsaRemoteMethodName length] - 1];
+    wsaRemoteMethodName = [wsaRemoteMethodName stringByReplacingOccurrencesOfString:@":"
+                                                                         withString:@"_"];
     
     NSString *call = [NSString stringWithFormat:@"%@:%@",  self.curiePrefix, wsaRemoteMethodName];
     
     // FIXME Factor this out into a separate utility function designed to pull out
     // values from the various UI widgets. Buttons, for example,
     NSString *value = nil;
-    if ([sender isKindOfClass:[NSButton class]])
+    if ([sender isKindOfClass:[NSButton class]]) {
         value = [sender title];
+    } else if ([sender isKindOfClass:[NSTextField class]]) {
+        value = [sender stringValue];
+    }
     
     NSArray  *callArgs = [NSArray arrayWithObjects:@{@"value":value}, nil];
     NSLog(@"Send %@ call to Authobahn Value: %@", wsaRemoteMethodName,callArgs);
