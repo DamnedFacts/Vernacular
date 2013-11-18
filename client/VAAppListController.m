@@ -43,7 +43,6 @@
 - (BOOL) performAddItem: (ApplicationShim *) theItem
 {
     THCanvasItem * item   = nil;
-    unsigned halfItemWidth = (itemWidth * 0.5);
 
     NSPoint   dropPoint;
     NSRect    itemBounds;
@@ -62,7 +61,6 @@
     [image setSize:imageSize];
     [item setDefaultImage: image];
     
-    int i = 0;
     itemBounds = NSMakeRect (dropPoint.x - imageSize.width,
                              dropPoint.y + imageSize.height,
                              imageSize.width,
@@ -79,4 +77,7 @@
     return YES;
 }
 
+- (void) clearCanvasItems {
+    [canvasView removeCanvasItems: canvasItems];
+}
 @end

@@ -671,7 +671,7 @@
         </menu>
         <customObject id="494" customClass="VAMain">
             <connections>
-                <outlet property="appsViewer" destination="601" id="621"/>
+                <outlet property="appsListController" destination="601" id="giN-9r-OdJ"/>
                 <outlet property="canvasViewWindow" destination="587" id="600"/>
                 <outlet property="connectButton" destination="555" id="564"/>
                 <outlet property="connectUrlTextField" destination="545" id="562"/>

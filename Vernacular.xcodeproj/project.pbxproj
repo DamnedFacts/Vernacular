@@ -34,6 +34,7 @@
 		9B83BEB5179204F400BFFBBD /* THCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEAE179204F400BFFBBD /* THCanvasView.m */; };
 		9B83BEB8179207E100BFFBBD /* VAAppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B83BEB7179207E100BFFBBD /* VAAppListController.m */; };
 		9B9F2F5117FBB98300B25CB5 /* NSObject+DumpClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */; };
+		9BE96AD8182ACE2400B5F3A0 /* Vernacular servers in Resources */ = {isa = PBXBuildFile; fileRef = 9BE96AD7182ACE2400B5F3A0 /* Vernacular servers */; };
 		9BF0613B17A9685300A13FDA /* ApplicationShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613A17A9685300A13FDA /* ApplicationShim.m */; };
 		9BF0613E17B9781B00A13FDA /* ControllerShim.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0613D17B9781B00A13FDA /* ControllerShim.m */; };
 		9BFAD3BD17A70B5D001FCAD2 /* VADefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */; };
@@ -107,15 +108,11 @@
 
 /* Begin PBXFileReference section */
 		9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSWebSocketApplication.xcodeproj; path = ../RSWebSocketApplication/RSWebSocketApplication.xcodeproj; sourceTree = "<group>"; };
-		9B30BFE115EBE871003B6AB5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		9B30BFE215EBE871003B6AB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		9B30BFE315EBE871003B6AB5 /* calculator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = calculator.py; sourceTree = "<group>"; };
 		9B30C02615EBE93B003B6AB5 /* Vernacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vernacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B30C04915EC1EB0003B6AB5 /* RSURLField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSURLField.h; path = client/RSURLField.h; sourceTree = SOURCE_ROOT; };
 		9B30C04A15EC1EB0003B6AB5 /* RSURLField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSURLField.m; path = client/RSURLField.m; sourceTree = SOURCE_ROOT; };
 		9B30C04C15F2A2D2003B6AB5 /* exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exclamation.png; sourceTree = "<group>"; };
 		9B30C04D15F2A2D2003B6AB5 /* exclamation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exclamation@2x.png"; sourceTree = "<group>"; };
-		9B4C05D01805A457002AAA6F /* OutletWrapper.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OutletWrapper.py; sourceTree = "<group>"; };
 		9B68E8DB13FCB4AC00685A32 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9B68E8DE13FCB4AC00685A32 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9B68E8DF13FCB4AC00685A32 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -140,7 +137,6 @@
 		9B83BEAE179204F400BFFBBD /* THCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCanvasView.m; sourceTree = "<group>"; };
 		9B83BEB6179207E100BFFBBD /* VAAppListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAAppListController.h; path = client/VAAppListController.h; sourceTree = SOURCE_ROOT; };
 		9B83BEB7179207E100BFFBBD /* VAAppListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAAppListController.m; path = client/VAAppListController.m; sourceTree = SOURCE_ROOT; };
-		9B84551A157C282E00744516 /* Echo.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Echo.py; sourceTree = "<group>"; };
 		9B87846A15E43192000264F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
 		9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DumpClassInfo.m"; sourceTree = "<group>"; };
@@ -153,7 +149,7 @@
 		9BCB319A157C221800DB7961 /* Vernacular-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Vernacular-Prefix.pch"; path = "client/Vernacular-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		9BCB31A1157C225000DB7961 /* VAMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMain.h; path = client/VAMain.h; sourceTree = SOURCE_ROOT; };
 		9BCB31A2157C225000DB7961 /* VAMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMain.m; path = client/VAMain.m; sourceTree = SOURCE_ROOT; };
-		9BF0613717A8980000A13FDA /* AppServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = AppServer.py; sourceTree = "<group>"; };
+		9BE96AD7182ACE2400B5F3A0 /* Vernacular servers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Vernacular servers"; sourceTree = SOURCE_ROOT; };
 		9BF0613917A9685300A13FDA /* ApplicationShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationShim.h; path = client/ApplicationShim.h; sourceTree = SOURCE_ROOT; };
 		9BF0613A17A9685300A13FDA /* ApplicationShim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationShim.m; path = client/ApplicationShim.m; sourceTree = SOURCE_ROOT; };
 		9BF0613C17B9781B00A13FDA /* ControllerShim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllerShim.h; path = client/ControllerShim.h; sourceTree = SOURCE_ROOT; };
@@ -186,17 +182,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B30BFE015EBE871003B6AB5 /* calculator */ = {
-			isa = PBXGroup;
-			children = (
-				9B30BFE115EBE871003B6AB5 /* index.html */,
-				9B30BFE215EBE871003B6AB5 /* README.md */,
-				9B30BFE315EBE871003B6AB5 /* calculator.py */,
-				9B4C05D01805A457002AAA6F /* OutletWrapper.py */,
-			);
-			path = calculator;
-			sourceTree = "<group>";
-		};
 		9B30C02915EBE93B003B6AB5 /* Vernacular client */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +209,7 @@
 			children = (
 				9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */,
 				9B0BE7F515B896760080ADC7 /* RSWebSocketApplication.xcodeproj */,
-				9B845516157C282E00744516 /* Vernacular servers */,
+				9BE96AD7182ACE2400B5F3A0 /* Vernacular servers */,
 				9B30C02915EBE93B003B6AB5 /* Vernacular client */,
 				9B68E8DA13FCB4AC00685A32 /* Frameworks */,
 				9B68E8D813FCB4AC00685A32 /* Products */,
@@ -307,25 +292,6 @@
 			);
 			name = CanvasView;
 			path = "THCanvasView-10";
-			sourceTree = "<group>";
-		};
-		9B845516157C282E00744516 /* Vernacular servers */ = {
-			isa = PBXGroup;
-			children = (
-				9BF0613717A8980000A13FDA /* AppServer.py */,
-				9B30BFE015EBE871003B6AB5 /* calculator */,
-				9B845517157C282E00744516 /* echo */,
-			);
-			name = "Vernacular servers";
-			path = servers;
-			sourceTree = SOURCE_ROOT;
-		};
-		9B845517157C282E00744516 /* echo */ = {
-			isa = PBXGroup;
-			children = (
-				9B84551A157C282E00744516 /* Echo.py */,
-			);
-			path = echo;
 			sourceTree = "<group>";
 		};
 		9B95E57C157C17F3009493DE /* Products */ = {
@@ -458,6 +424,7 @@
 				9B83BE86178B923F00BFFBBD /* NSLogConsole.xib in Resources */,
 				9B83BEA11792034C00BFFBBD /* GenericWSApplicationIcon.icns in Resources */,
 				9B83BEAF179204F400BFFBBD /* History.txt in Resources */,
+				9BE96AD8182ACE2400B5F3A0 /* Vernacular servers in Resources */,
 				9B83BEB0179204F400BFFBBD /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

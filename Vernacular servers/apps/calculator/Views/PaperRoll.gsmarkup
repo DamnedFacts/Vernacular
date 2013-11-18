@@ -8,7 +8,7 @@
 
             <vbox>
 
-                <textField editable="no" id="TextField" action="setStringValue:" height="300.0" width="200.0"/>
+                <textField editable="no" id="PaperRoll" action="" height="300.0" width="200.0"/>
 
             </vbox>
 
@@ -19,7 +19,7 @@
        In other words, the textField attribute is equivalent to having a
        NSNibOutletConnector with source #Controller, target #TextField,
        and key textField -->
-  <instance instanceOf="ControllerShim" id="Controller" textField="#TextField" />
+  <instance instanceOf="ControllerShim" id="Controller" paperRoll="#PaperRoll" />
 
 </objects>
 

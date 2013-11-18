@@ -65,7 +65,7 @@ class IrcsomeServer(BaseServer):
     basePath = os.path.dirname(os.path.realpath(__file__))
 
     def irc_connect(self):
-        server = "irc.he.net"
+        server = "irc.efnet.net"
         port = 6667
         nickname = "vernac"
         target = "#vernacular"

@@ -22,6 +22,15 @@
     return nil;
 }
 
+- (void)handleCallBack:(id)value {
+    NSLog(@"FIXME ControllerShim handleCallBack:");
+    NSLog(@"%@", value);
+}
+
+- (void)handleCallError: (NSString *)callId errorURI:(NSString *)uri errorDesc:(NSString*)desc errorDetails:(id)details {
+    NSLog(@"FIXME Received error: %@ %@ %@ %@", callId, uri, desc, details);
+}
+
 #pragma mark Key-Value coding compliance
 - (id) valueForUndefinedKey:(NSString *)key {
     return [self.keyValueStore objectForKey:key];

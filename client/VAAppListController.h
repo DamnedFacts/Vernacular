@@ -20,5 +20,6 @@
 - (BOOL) performAddItem: (id) theItem;
 - (NSMutableArray *)canvasItems;
 - (void)setCanvasItems:(NSMutableArray *)aValue;
+- (void) clearCanvasItems;
 
 @end

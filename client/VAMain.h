@@ -15,7 +15,7 @@
 @class ApplicationShim;
 @interface VAMain : NSObject <NSApplicationDelegate,RSWebSocketApplicationDelegate> {
     IBOutlet NSWindow *canvasViewWindow;
-    IBOutlet VAAppListController *appsViewer;
+    IBOutlet VAAppListController *appsListController;
     
     NSString *fileName;
     NSURL *appUrl;

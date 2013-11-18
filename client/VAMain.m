@@ -17,7 +17,6 @@
 @synthesize connectWindow;
 @synthesize connectUrlTextField;
 @synthesize connectButton;
-@synthesize appsViewer;
 
 - (void)awakeFromNib
 {
@@ -67,7 +66,8 @@
 - (IBAction)connectToVernacularServer:(id)sender
 {
     [connectWindow close];
-    
+    [appsListController clearCanvasItems];
+
     // connectUrlTextField at this point has been pre-validated.
     NSLog(@"Connecting to: %@",[connectUrlTextField stringValue]);
     appUrl = [NSURL URLWithString:[connectUrlTextField stringValue]];
@@ -123,7 +123,7 @@
         for (NSString *appName in appsList) {
             NSString *appUri = [appsList objectForKey:appName];
             ApplicationShim *anApp = [[ApplicationShim alloc] initWithInfo:appUri name:appName];
-            [appsViewer performAddItem: anApp];
+            [appsListController performAddItem: anApp];
         }
     } else {
         NSLog(@"Failure to retrieve require apps list from server");
@@ -132,8 +132,10 @@
 }
 
 - (void) processAppSelection: (NSNotification *)appSelNotification {
-    self.selectedApp = [appSelNotification object];
+    [canvasViewWindow close];
+    self.selectedApp = [[appSelNotification object] objectForKey:@"object"];
     [self.selectedApp beginApplication];
+    
 }
 
 - (void) handleCallError: (NSString *)callId errorURI:(NSString *)uri errorDesc:(NSString*)desc errorDetails:(id)details {

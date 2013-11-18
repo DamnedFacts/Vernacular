@@ -36,12 +36,12 @@
 
 
 - (void)handleCallBack:(id)value {
-    NSLog(@"ApplicationShim handleCallBack:");
+    NSLog(@"FIXME ApplicationShim handleCallBack:");
     NSLog(@"%@", value);
 }
 
 - (void)handleCallError: (NSString *)callId errorURI:(NSString *)uri errorDesc:(NSString*)desc errorDetails:(id)details {
-    NSLog(@"Received error: %@ %@ %@ %@", callId, uri, desc, details);
+    NSLog(@"FIXME Received error: %@ %@ %@ %@", callId, uri, desc, details);
 }
 
 - (void)handleEvent:(NSURL *)topicUri event:(id)event {
@@ -154,7 +154,8 @@
             //
             // [object action] should be the defined action selector in the XML file.
             //
-            NSLog(@"Object: %@ Target:%@ Action:%@", namedObject, [namedObject target], NSStringFromSelector([namedObject action]));
+            NSLog(@"Object: %@ Target:%@ Action:%@", namedObject, [namedObject target],
+                  NSStringFromSelector([namedObject action]));
             [[namedObject target] setAction:[namedObject action]];
         }
     }

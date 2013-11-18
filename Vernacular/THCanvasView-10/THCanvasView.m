@@ -275,7 +275,7 @@ static NSArray * DrawingAttributeKeys = nil;
         if ([self isValidUrl:[clickedItem filesystemPath]]) {
             NSLog(@"Clicked URL: %@", [clickedItem filesystemPath]);
             [[NSNotificationCenter defaultCenter] postNotificationName:VAAppSelectedNotification
-                                                            object: [clickedItem object]
+                                                                object: @{@"window":self, @"object":[clickedItem object]}
                                                           userInfo: nil];
 
         }
