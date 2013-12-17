@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (DumpClassInfo)
-- (void)dumpClassInfo: (id)obj signaturesTable:(NSMutableDictionary *)methodSignatures flattenInheritance:(bool)flag;
+- (void)dumpClassInfo: (id)obj signaturesTable:(NSMutableDictionary *)methodSignatures flattenInheritance:(bool)flattenFlag ignorePrivateMethods:(bool)ignoreFlag;
 @end

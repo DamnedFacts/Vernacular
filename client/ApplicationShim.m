@@ -21,6 +21,7 @@
         self.appIcon = [NSImage imageNamed:@"GenericWSApplicationIcon"];
         self.appName = name;
         self.wsa = [[NSApp delegate] wsa];
+        
         return self;
     }
     return nil;
@@ -41,33 +42,50 @@
 }
 
 - (void)handleCallError: (NSString *)callId errorURI:(NSString *)uri errorDesc:(NSString*)desc errorDetails:(id)details {
-    NSLog(@"FIXME Received error: %@ %@ %@ %@", callId, uri, desc, details);
+    NSLog(@"FIXME ApplicationShim handleCallError: %@ %@ %@ %@", callId, uri, desc, details);
 }
 
 - (void)handleEvent:(NSURL *)topicUri event:(id)event {
-    // http://example.com/simple/calculator#textField.iboutlet {selector, parameter}
-    NSLog(@"topicUri: %@ %@", topicUri, event);
-    NSString *fragment = [topicUri fragment];
+    // Forwarded from VAMain class instance who is the delegate for RSWebSocketApplication.
+    // FIXME May want to forward this event on to ControllerShim instance?
     
+    NSString *fragment = [topicUri fragment];
     if ([fragment compare:@"GSMarkupEvent" ] == NSOrderedSame) {
-        [self loadMainGSMarkupData: [event objectForKey:@"markup"]];
-    } else {
-        // Our object for a GUI element. Pull out left-hand value, ignoring ".iboutlet"
-        NSString *objectName = [[fragment componentsSeparatedByString: @"."] objectAtIndex:0];
-        
-        // The selector to call upon this object.
-        SEL selector = NSSelectorFromString([event objectForKey:@"selector"]);
-        
-        NSLog(@"handleEvent target:%@ action:%@", objectName, NSStringFromSelector(selector));
-        
-        // We're assuming only one value, so FIXME. Use NSInvocation for objects with
-        // choosen selectors that take multiple arguments.
-        id param = [[event objectForKey:@"parameters"] objectAtIndex:0];
-        
-        [[self.controller valueForKey:objectName] performSelector:selector withObject:param];
+        [self loadGSMarkupData: [event objectForKey:@"markup"]];
     }
 }
 
+- (void) loadIbData:(id)value {
+    NSLog(@"%@", value);
+    [self loadGSMarkupData: [value objectForKey:@"markup"]];
+}
+
+- (void) loadMainIbFileCallBack:(id)value
+{
+
+    NSLog(@"%@", value);
+    [self loadGSMarkupData: [value objectForKey:@"markup"]];
+    
+    // FIXME Calls from Vernacular client through Autobahn will have their results
+    // returned asynchronously, which needs to be handled if that is unwanted.
+    
+    // Register a RPC that will instruct the Vernacular client to load sent IB data
+    NSString *selector = @"loadIbData:";
+    Method meth = class_getInstanceMethod([self class], NSSelectorFromString(selector));
+    NSString *typeSignature = [NSString stringWithCString:method_getTypeEncoding(meth)
+                                                 encoding:NSASCIIStringEncoding];
+    [self.controller setRemoteBindingsForNamedObject:@"clientControl"
+                                              object:self
+                                          signatures:@{NSStringFromClass([self class]):@{selector:typeSignature}}
+                                             baseUri:self.curiePrefix];
+        
+    NSString *call = [NSString stringWithFormat:@"%@:applicationDidFinishLaunching", self.curiePrefix];
+    [self.wsa sendCallMessage:call
+                       target:self
+               resultSelector:@selector(handleCallBack:)
+                errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
+                         args:[NSArray arrayWithObjects: nil]];
+}
 
 - (void) beginApplication
 {
@@ -77,24 +95,24 @@
         [self.wsa sendPrefixMessage:self.curiePrefix uri:self.uriPrefix];
     }
     
-    // Register for the Pub/Sub event of "sendGSMarkup", indicating that a new view is being displayed.
-    // -handleEvent:event: will receive this event.
-    // Note: Register for events before sending out call messages.
-    [self.wsa sendSubscribeMessage: [NSString stringWithFormat:@"%@:GSMarkupEvent", self.curiePrefix]];
+    // Indicate that this app is now the active app to the server
+    [self.wsa sendCallMessage:[NSString stringWithFormat:@"registerAppAsRunning"]
+                       target:self
+               resultSelector:@selector(handleCallBack:)
+                errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
+                         args:[NSArray arrayWithObjects: self.appName, nil]];
     
     // Call for main IB (GS Markup Interface Builder) data
     [self.wsa sendCallMessage:[NSString stringWithFormat:@"%@:loadMainIbFile", self.curiePrefix]
                        target:self
-               resultSelector:@selector(handleCallBack:)
+               resultSelector:@selector(loadMainIbFileCallBack:)
                 errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
                          args:[NSArray arrayWithObjects: nil]];
 }
 
 
--(id)loadMainGSMarkupData:(id)value
+-(id)loadGSMarkupData:(id)value
 {
-    
-    
     BOOL b = [NSBundle loadGSMarkupData: [value dataUsingEncoding:NSUTF8StringEncoding]
                                withName:@"FIXME"
                       externalNameTable: [NSDictionary dictionaryWithObject: self forKey: @"NSOwner"]
@@ -104,19 +122,13 @@
     
     if (b) {
         NSLog (@"GS markup loaded!");
-
-        NSString *call = [NSString stringWithFormat:@"%@:applicationDidFinishLaunching", self.curiePrefix];
-        [self.wsa sendCallMessage:call target:self
-                   resultSelector:@selector(handleCallBack:)
-                    errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
-                             args:[NSArray arrayWithObjects: nil]];
         return [self init];
     } else {
         NSLog (@"Could not load GS Data!");
         return nil;
     }
     
-    // Instead of coercing RIB defined objects into Cocoa native types, perhaps proxy objects instead?
+    // Instead of coercing IB defined objects into Cocoa native types, perhaps proxy objects instead?
 }
 
 /* We're overriding our property's setter in order to catch the setting of our controller object
@@ -129,9 +141,7 @@
         // Since we want only one controller instance, we merge the dictionary from the controller
         // object that is threatening to override our current controller.
         [[self.controller keyValueStore] addEntriesFromDictionary: [controller keyValueStore]];
-        return;
-    }
-    else {
+    } else {
         // The controller has not been set yet, so assign one.
         _controller = controller;
     }

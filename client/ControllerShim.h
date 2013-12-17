@@ -14,13 +14,14 @@
 @interface ControllerShim: NSObject {
     RSWebSocketApplication   *_wsa;
     NSMutableDictionary  *_keyValueStore;
-    NSString *_curiePrefix;
+    NSString *_curiePrefix, *_uriPrefix;
 }
 
-@property (nonatomic,retain) NSString *curiePrefix;
+@property (nonatomic,retain) NSString *curiePrefix, *uriPrefix;
 @property (nonatomic,retain) NSMutableDictionary *keyValueStore;
 @property (nonatomic,retain) RSWebSocketApplication *wsa;
 
+-(void) setRemoteBindingsForNamedObject:(NSString *)name object:(id)anObject signatures:(NSDictionary *)methodSignatures baseUri:topicUri;
 -(void) setAction:(SEL)actionSelector;
 @end
 

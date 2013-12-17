@@ -5,9 +5,14 @@
         <!-- the main window -->
         <window title="Ircsome IRC Client" closable="no" id ="IrcsomeWindow">
             <vbox>
-                <scrollView width="800" height="600">
-                    <textView id="textView"/>
-                </scrollView>
+                <hbox>
+                    <scrollView width="800" height="600">
+                        <textView id="consoleView"/>
+                    </scrollView>
+                    <scrollView width="120" height="600">
+                        <textView id="nickView"/>
+                    </scrollView>
+                </hbox>
                 <textField id="entryField" target="#Controller" action="sendText:" />
             </vbox>
         </window>
@@ -32,7 +37,8 @@
        totally outside the nib in a connector, which are provided by the
        nameTable dictionary when the nib is loaded) -->
   <outlet source="#NSOwner" target="#Controller" key="controller" />
-  <outlet source="#Controller" target="#textView" key="textView" />
+  <outlet source="#Controller" target="#nickView" key="nickView" />
+  <outlet source="#Controller" target="#consoleView" key="consoleView" />
   <outlet source="#Controller" target="#entryField" key="entryField" />
 </connectors>
 

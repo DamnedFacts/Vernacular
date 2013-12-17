@@ -48,7 +48,7 @@
     
     // Set notification callback for Venarcular app selection
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(processAppSelection:)
+                                             selector:@selector(handleAppSelection:)
                                                  name:VAAppSelectedNotification
                                                object:nil];
 }
@@ -88,7 +88,7 @@
     
     [wsa sendCallMessage:@"availableApps"
                   target:self
-          resultSelector:@selector(processAppsList:)
+          resultSelector:@selector(handleAppsList:)
            errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
                     args:[NSArray arrayWithObjects: nil]];
 }
@@ -96,9 +96,9 @@
 - (void)didEvent:(NSString*)topicUri event:(id)event
 {
     NSLog(@"Received event! %@ %@",topicUri, event);
+    // Forward the events to the selected app's ApplicationShim instance.
     [self.selectedApp handleEvent:[NSURL URLWithString:topicUri] event:event];
 }
-
 /* CallResult and CallError are handled indirectly by invocations assigned to the call */
 
 
@@ -117,7 +117,7 @@
 
 #pragma mark -
 #pragma mark Callbacks
-- (void) processAppsList: (id)appsList {
+- (void) handleAppsList: (id)appsList {
     if ([appsList isKindOfClass:[NSDictionary class]]) {
         [canvasViewWindow makeKeyAndOrderFront:self];
         for (NSString *appName in appsList) {
@@ -131,7 +131,7 @@
     }
 }
 
-- (void) processAppSelection: (NSNotification *)appSelNotification {
+- (void) handleAppSelection: (NSNotification *)appSelNotification {
     [canvasViewWindow close];
     self.selectedApp = [[appSelNotification object] objectForKey:@"object"];
     [self.selectedApp beginApplication];

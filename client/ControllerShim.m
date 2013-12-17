@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.wsa = [[NSApp delegate] wsa];
+        self.uriPrefix = [[[NSApp delegate] selectedApp] uriPrefix];
         self.curiePrefix = [[[NSApp delegate] selectedApp] curiePrefix];
         self.keyValueStore = [NSMutableDictionary dictionary];
         return self;
@@ -28,7 +29,7 @@
 }
 
 - (void)handleCallError: (NSString *)callId errorURI:(NSString *)uri errorDesc:(NSString*)desc errorDetails:(id)details {
-    NSLog(@"FIXME Received error: %@ %@ %@ %@", callId, uri, desc, details);
+    NSLog(@"FIXME ControllerShim handleCallError: %@ %@ %@ %@", callId, uri, desc, details);
 }
 
 #pragma mark Key-Value coding compliance
@@ -40,29 +41,31 @@
     NSLog (@"Set value \"%@\" for key \"%@\" of %@", anObject, key, [self class]);
     [self.keyValueStore setObject:anObject forKey:key];
     
-    // Set WAMP subscription event for the referencing object outlet connections.
-    NSString *topicUri = [NSString stringWithFormat:@"%@:%@.iboutlet", self.curiePrefix, key];
-    [self.wsa sendSubscribeMessage: topicUri];
-    
+    // Register this object to receive all Objective-C style messages sent to it
     NSMutableDictionary *methodSignatures = [[NSMutableDictionary alloc] init];
-    [self dumpClassInfo: [self.keyValueStore objectForKey:key] signaturesTable:methodSignatures flattenInheritance:TRUE];
+    [self dumpClassInfo: anObject
+        signaturesTable: methodSignatures
+     flattenInheritance: TRUE
+   ignorePrivateMethods:TRUE];
     
+    [self setRemoteBindingsForNamedObject:key object:anObject signatures:methodSignatures baseUri:self.curiePrefix];
+}
+
+-(void) setRemoteBindingsForNamedObject:(NSString *)name object:(id)anObject signatures:(NSDictionary *)methodSignatures baseUri:(NSString *)uri
+{
+    NSString *topicUri = [NSString stringWithFormat:@"%@:%@.iboutlet", uri, name];
     NSString *call = [NSString stringWithFormat:@"%@:setRemoteMethodBindingsForObject_",  self.curiePrefix];
-    NSArray  *callArgs = [NSArray arrayWithObjects:@{@"object":key, @"methodSignatures":methodSignatures}, nil];
+    NSArray  *callArgs = [NSArray arrayWithObjects:@{@"object":name, @"methodSignatures":methodSignatures}, nil];
+
     [self.wsa sendCallMessage:call
-                       target:[[NSApp delegate] selectedApp]
+                       target:self
                resultSelector:@selector(handleCallBack:)
                 errorSelector:@selector(handleCallError:errorURI:errorDesc:errorDetails:)
                          args:callArgs];
     
-//    NSData *jsonData;
-//    NSError *e = nil;
-//    jsonData = [NSJSONSerialization dataWithJSONObject:methodSignatures options:kNilOptions error:&e];
-//    if (!jsonData)
-//        NSLog(@"Error parsing JSON string for message: %@", e);
-//    [jsonData writeToURL:[NSURL URLWithString:[NSString stringWithFormat:@"file:///tmp/vernacular-%@-%@-%@.json",
-//                                               self.curiePrefix, key, [anObject class]]]
-//              atomically:YES];
+//    [self.wsa registerMethodForRpc:anObject selector:selector baseUri:topicUri]
+
+    [self.wsa registerForRpc:anObject baseUri:topicUri];
 }
 
 -(IBAction)genericAction:(id)sender {

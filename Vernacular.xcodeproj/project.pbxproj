@@ -139,8 +139,8 @@
 		9B83BEB7179207E100BFFBBD /* VAAppListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAAppListController.m; path = client/VAAppListController.m; sourceTree = SOURCE_ROOT; };
 		9B87846A15E43192000264F8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B95E57B157C17F3009493DE /* Renaissance.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Renaissance.xcodeproj; path = ../Renaissance/Renaissance.xcodeproj; sourceTree = "<group>"; };
-		9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DumpClassInfo.m"; sourceTree = "<group>"; };
-		9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DumpClassInfo.h"; sourceTree = "<group>"; };
+		9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DumpClassInfo.m"; path = "Vernacular/Vernacular/NSObject+DumpClassInfo.m"; sourceTree = "<group>"; };
+		9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DumpClassInfo.h"; path = "Vernacular/Vernacular/NSObject+DumpClassInfo.h"; sourceTree = "<group>"; };
 		9BC24969157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = client/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
 		9BC2496B157C24310074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = client/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		9BC24973157C24570074F558 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = client/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
@@ -193,8 +193,6 @@
 				9BFAD3BC17A70B5D001FCAD2 /* VADefines.m */,
 				9BF0613917A9685300A13FDA /* ApplicationShim.h */,
 				9BF0613A17A9685300A13FDA /* ApplicationShim.m */,
-				9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */,
-				9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */,
 				9BF0613C17B9781B00A13FDA /* ControllerShim.h */,
 				9BF0613D17B9781B00A13FDA /* ControllerShim.m */,
 				9BC24972157C24570074F558 /* MainMenu.xib */,
@@ -202,6 +200,16 @@
 			);
 			name = "Vernacular client";
 			path = Vernacular;
+			sourceTree = "<group>";
+		};
+		9B5D10141857DE91002CCD54 /* NSObject+DumpClassInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9B9F2F4F17FBB98300B25CB5 /* NSObject+DumpClassInfo.m */,
+				9B9F2F5017FBB98300B25CB5 /* NSObject+DumpClassInfo.h */,
+			);
+			name = "NSObject+DumpClassInfo";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		9B68E8CC13FCB4AB00685A32 = {
@@ -248,6 +256,7 @@
 		9B68E8E213FCB4AC00685A32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B5D10141857DE91002CCD54 /* NSObject+DumpClassInfo */,
 				9BFAD3C117A70D18001FCAD2 /* RSURLField */,
 				9B83BEA2179204F400BFFBBD /* CanvasView */,
 				9B83BE84178B922300BFFBBD /* NSLogConsole */,

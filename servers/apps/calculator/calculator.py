@@ -1,15 +1,12 @@
-import os, thread, code
-from autobahn.wamp import exportRpc
-from baseserver import BaseServer
-
-def init(factory):
-    return CalculatorServer(factory)
+import os
+#from autobahn.wamp import exportRpc
+from baseserver import BaseServer, exportRpc
 
 class CalculatorServer(BaseServer):
-    baseName = "Calculator"
-    baseUri = "http://sarkis.info/simple/calculator#"
-    baseCurie = "calculator:"
-    basePath = os.path.dirname(os.path.realpath(__file__))
+    base_name = "Calculator"
+    base_uri = "http://sarkis.info/simple/calculator#"
+    base_curie = "calculator:"
+    base_path = os.path.dirname(os.path.realpath(__file__))
     GSMainIbFile = "MainMenu"
 
     def __postinit__(self):
@@ -19,24 +16,17 @@ class CalculatorServer(BaseServer):
         self.operand_2 = u''
         self.memory = 0
         self.negate = False
-        # FIXME: If debug only.
-        #thread.start_new_thread(self.interactive, ())
-
-        ## register a single, fixed URI as PubSub topic
-        print "Calculator started..."
-
-    def interactive(self):
-        print "Dropping to interactive prompt"
-        code.InteractiveConsole(globals()).interact()
 
     @exportRpc
     def showPaperRoll(self, arg):
-        self.loadIbNamed("PaperRoll")
+        self.clientControl.loadIbData_(self.loadIbNamed("PaperRoll"))
 
     @exportRpc
     def applicationDidFinishLaunching(self):
         self.totaled = 0.0
         self.textField.setStringValue_(str(self.totaled))
+        # FIXME: If debug only.
+        import thread;thread.start_new_thread(self.interactive, ())
 
     # Defined in calculator.gsmarkup
     @exportRpc
@@ -62,6 +52,8 @@ class CalculatorServer(BaseServer):
         self.operator = False
         self.totaled = 0.0
         self.textField.setStringValue_(str(0.0))
+        if hasattr(self, 'paperRoll'):
+            self.paperRoll.setStringValue_("")
 
     @exportRpc
     def operator_(self, arg):
@@ -90,7 +82,16 @@ class CalculatorServer(BaseServer):
     @exportRpc
     def total_(self, arg):
         self.totaled = eval("{0} {1} {2}".format(float(self.operand_1), self.operator, float(self.operand_2)))
+        self.textField.setStringValue_(str(self.totaled))
+
+        if hasattr(self, 'paperRoll'):
+            #call_uri = self.base_uri + "paperRoll.iboutlet"
+            #self.protocol.call(call_uri, {"selector":"stringValue", "parameters":[]}).addCallback(onClientResult)
+            result = self.paperRoll.stringValue()
+            if result != "":
+                result = result + "\n"
+            self.paperRoll.setStringValue_(str(result) + str(self.operand_1) + self.operator + str(self.operand_2) + "\n=" + str(self.totaled) + "\n")
+
         self.operator = False
         self.operand_1 = str(self.totaled)
         self.operand_2 = ""
-        self.textField.setStringValue_(str(self.totaled))
