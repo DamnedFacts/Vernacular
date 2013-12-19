@@ -23,9 +23,11 @@ for app in os.listdir(os.path.dirname(os.path.abspath(__file__))+"/apps/"):
             print "Invalid app {} skipped ({} : {}).".format(appname, sys.exc_info()[0], err)
 
 class AppServerProtocol(WampServerProtocol):
-    def __init__(self):
-        self.active_app = None
-        super(AppServerProtocol, self).__init__()
+    # Not necessary, and WampServerProtocol is inexlicably an old-style class
+    # super will not work with it.
+    #def __init__(self):
+    #    self.active_app = None
+    #    super(AppServerProtocol, self).__init__()
 
     def onConnect(self, connRequest):
         pass
